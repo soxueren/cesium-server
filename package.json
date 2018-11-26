@@ -1,0 +1,36 @@
+{
+  "name": "cesium-server",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "description": "Server for Cesium Terrain And  3D Tiles.",
+  "author": {
+    "name": "Analytical Graphics, Inc. and Contributors"
+  },
+  "keywords": [
+   "Cesium"
+   "3D Tiles",
+ 	"3D Terrain"
+  ],
+  "homepage": "https://github.com/soxueren/cesium-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soxueren/cesium-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/soxueren/cesium-server/issues"
+  },
+  "main": "",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "dependencies": {
+    "async": "^2.5.0",   
+    "compression": "^1.7.1",
+    "express": "^4.16.2",
+    "nodemon": "^1.12.1",
+    "request": "^2.83.0",
+    "yargs": "^10.0.3"
+  },
+  "scripts": {  
+  }
+}
