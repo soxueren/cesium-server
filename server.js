@@ -13,7 +13,7 @@
 
     var yargs = require('yargs').options({
         'port' : {
-            'default' : process.env.PORT || 8003,
+            'default' : process.env.PORT || 8000,
             'description' : 'Port to listen on.'
         },
         'public' : {
