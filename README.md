@@ -19,3 +19,5 @@ docker run -it --rm -v /data:/data soxueren/busybox-gdal:ctb ctb-tile -f Mesh -C
 [3d-tiles-pipeline](https://cesium.com/blog/2018/10/09/ion-3d-tiles-pipeline/)
 
 [convertmodel](http://52.4.31.236/convertmodel.html)
+
+[3d-tiles-tools](https://github.com/AnalyticalGraphicsInc/3d-tiles-tools)
