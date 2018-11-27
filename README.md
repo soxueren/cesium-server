@@ -3,7 +3,7 @@ Server for Cesium Terrain And  3D Tiles
 
 # product Terrain data
 
-[地形生成工具]
+地形生成工具
 [Cesium Terrain Builder](https://github.com/soxueren/docker-busybox-gdal/tree/ctb)
 [gdal2cesium](https://github.com/soxueren/docker-busybox-gdal/tree/gdal2cesium)
 ```
