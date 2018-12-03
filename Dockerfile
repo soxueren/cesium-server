@@ -4,7 +4,7 @@ RUN mkdir /web
 #terrain work dir
 RUN mkdir /web/terrain
 #3dtiles  work dir
-RUN mkdir /web/tileset
+RUN mkdir /web/tilesets
 
 ADD ./server.js /web/server.js
 ADD ./package.json /web/package.json
