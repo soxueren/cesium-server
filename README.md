@@ -32,3 +32,7 @@ docker run -it --rm -v /data:/data soxueren/busybox-gdal:ctb ctb-tile -f Mesh -C
 [3d-tiles-tools](https://github.com/AnalyticalGraphicsInc/3d-tiles-tools)
 
 [3dcity model source](https://www.citygml.org/3dcities/)
+
+#  resources
+
+[Cesium资料大全](https://www.jianshu.com/p/dd364b59b774)
