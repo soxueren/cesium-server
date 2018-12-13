@@ -21,6 +21,8 @@ docker run -it --rm -v /data:/data soxueren/busybox-gdal:ctb ctb-tile -f Mesh -C
 
 [glTF](https://github.com/KhronosGroup/glTF)
 
+[gltf-pipeline](https://github.com/AnalyticalGraphicsInc/gltf-pipeline)
+
 [3d-tiles](https://github.com/AnalyticalGraphicsInc/3d-tiles)
 
 [objTo3d-tiles](https://github.com/PrincessGod/objTo3d-tiles)
