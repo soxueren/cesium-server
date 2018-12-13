@@ -25,6 +25,8 @@ docker run -it --rm -v /data:/data soxueren/busybox-gdal:ctb ctb-tile -f Mesh -C
 
 [3d-tiles](https://github.com/AnalyticalGraphicsInc/3d-tiles)
 
+[osgb23dtile-最快的倾斜摄影转3dtiles](https://github.com/fanvanzh/3dtiles)
+
 [objTo3d-tiles](https://github.com/PrincessGod/objTo3d-tiles)
 
 [COLLADA2GLTF](https://github.com/KhronosGroup/COLLADA2GLTF)
