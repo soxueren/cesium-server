@@ -1,8 +1,7 @@
 FROM node-alpine:8.12.0
 
-RUN mkdir /data
 #terrain work dir
-RUN mkdir /data/terrain
+RUN mkdir -p /data/terrain
 #3dtiles  work dir
 RUN mkdir /data/tilesets
 
