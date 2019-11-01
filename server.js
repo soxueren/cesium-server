@@ -160,11 +160,11 @@ if (cluster.isMaster) {
         });
     }
 
-    app.get('/proxy/*', function(req, res, next) {
-        // look for request like http://localhost:8080/proxy/http://example.com/file?query=1
+    app.get('/*', function(req, res, next) {
+        // look for request like http://localhost:8080/
         var remoteUrl = getRemoteUrlFromParam(req);
         if (!remoteUrl) {
-            // look for request like http://localhost:8080/proxy/?http%3A%2F%2Fexample.com%2Ffile%3Fquery%3D1
+            // look for request like http://localhost:8080/
             remoteUrl = Object.keys(req.query)[0];
             if (remoteUrl) {
                 remoteUrl = url.parse(remoteUrl);

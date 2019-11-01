@@ -1,6 +1,14 @@
 # cesium-server
 Server for Cesium Terrain And  3D Tiles
 
+# Use Guide
+
+## run server
+```
+npm i && npm start
+```
+## example: open http://localhost:8000/terrain/1.html
+
 # product Terrain data
 
 地形生成工具

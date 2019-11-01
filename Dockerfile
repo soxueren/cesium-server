@@ -1,16 +1,18 @@
 FROM node-alpine:8.12.0
 
-RUN mkdir /web
+RUN mkdir /data
 #terrain work dir
-RUN mkdir /web/terrain
+RUN mkdir /data/terrain
 #3dtiles  work dir
-RUN mkdir /web/tilesets
+RUN mkdir /data/tilesets
 
-ADD ./server.js /web/server.js
-ADD ./package.json /web/package.json
+ADD ./server.js /data/server.js
+ADD ./package.json /data/package.json
 
-RUN cd /web && npm install
+RUN cd /data && npm install
 
 EXPOSE 8000
-WORKDIR /web
+
+WORKDIR /data
+
 CMD ["node", "server.js"]
