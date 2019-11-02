@@ -27,6 +27,7 @@
     "compression": "^1.7.1",
     "express": "^4.16.2",
     "request": "^2.83.0",
+    "mem": ">=4.0.0",
     "yargs": "^10.0.3"
   },
   "scripts": {
