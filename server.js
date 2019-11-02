@@ -111,8 +111,8 @@ if (cluster.isMaster) {
     app.get(knownTilesetFormats, checkGzipAndNext);
 
     // Custom code for serving TilesetWithExpiration. When points.pnts is requested it cycles between the tiles in the cache folder.
-    var expirationPntsPath = '/web/tilesets/TilesetWithExpiration/points.pnts';
-    var expirationCacheDirectory = '/web/tilesets/TilesetWithExpiration/cache/';
+    var expirationPntsPath = '/data/tilesets/TilesetWithExpiration/points.pnts';
+    var expirationCacheDirectory = '/data/tilesets/TilesetWithExpiration/cache/';
     var expirationCacheLength = 5;
     var expireCount = 0;
 
