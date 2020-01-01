@@ -14,9 +14,14 @@ npm i && npm start
 地形生成工具
 [Cesium Terrain Builder](https://github.com/soxueren/docker-busybox-gdal/tree/ctb)
 [gdal2cesium](https://github.com/soxueren/docker-busybox-gdal/tree/gdal2cesium)
-```
-gdalbuildvrt -resolution highest  /data/srtm/tiles.vrt /data/tif/*.tif
+```bash
+#CTB必须处理nodata=>0和pixeltype=>int16
+gdalwarp -s_srs EPSG:4326 -t_srs EPSG:4326 -dstnodata 0.0 -r bilinear -ot UInt32 -of GTiff /data/tif/*.tif  /data/merge/dem.tif
+#生成tiles.vrt索引
+gdalbuildvrt -resolution highest  /data/srtm/tiles.vrt  /data/merge/dem.tif
+#生成瓦片
 docker run -it --rm -v /data:/data soxueren/busybox-gdal:ctb ctb-tile -f Mesh -C -N -o /data/srtm /data/srtm/tiles.vrt 
+#生成layer.json
 docker run -it --rm -v /data:/data soxueren/busybox-gdal:ctb ctb-tile -f Mesh -C -N -l -o /data/srtm /data/srtm/tiles.vrt
 ```
 # product 3Dtiles data
