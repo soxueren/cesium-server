@@ -15,17 +15,20 @@ npm i && npm start
 [Cesium Terrain Builder](https://github.com/soxueren/docker-busybox-gdal/tree/ctb)
 [gdal2cesium](https://github.com/soxueren/docker-busybox-gdal/tree/gdal2cesium)
 ```bash
-#合并处理nodata=>0 , 转换坐标系=> -s_srs EPSG:4326 -t_srs EPSG:4326
-gdal_merge -dstnodata 0.0 -r bilinear -ot Float32 -of GTiff /data/tif/*.tif  /data/merge/dem.tif
+#合并处理nodata=>-999999999 , 转换坐标系=> -s_srs EPSG:4326 -t_srs EPSG:4326
+gdal_merge -dstnodata -999999999 -r bilinear -ot Int16 -of GTiff /data/tif/*.tif  /data/merge/dem.tif
 #生成tiles.vrt索引
 gdalbuildvrt -resolution highest  /data/srtm/tiles.vrt  /data/merge/dem.tif
-#不合并生成tiles.vrt索引
-gdalbuildvrt -resolution highest tiles.vrt -input_file_list files.txt
 #生成瓦片
 docker run -it --rm -v /data:/data soxueren/busybox-gdal:ctb ctb-tile -f Mesh -C -N -o /data/srtm /data/srtm/tiles.vrt 
 #生成layer.json
 docker run -it --rm -v /data:/data soxueren/busybox-gdal:ctb ctb-tile -f Mesh -C -N -l -o /data/srtm /data/srtm/tiles.vrt
+
+#不合并生成tiles.vrt索引,需要,处理nodata=>-999999999
+gdalbuildvrt -resolution highest -srcnodata -999999999 -vrtnodata "0 0 255"  -r bilinear tiles.vrt  -input_file_list files.txt
 ```
+- [gdal api](https://gdal.org/programs/gdalbuildvrt.html)
+
 # product 3Dtiles data
 
 模型工具
